@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.cardItems{
+.cardItem{
     height: 460px;
     width: 290px;
     padding: 20px;
@@ -23,7 +23,7 @@
     overflow: hidden;
 }
 
-.cardItem .cardImg  img{
+.cardItem .cardImg img{
     transform: scale(0.65);
 }
 
@@ -97,3 +97,10 @@
 .buttons #detalleshover, .buttons #addCart:hover{
     background-color: #4c00d1;
 }
+
+
+
+
+
+
+

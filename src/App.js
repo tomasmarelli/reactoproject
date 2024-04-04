@@ -1,25 +1,28 @@
 import './style.css';
 import NavBar from './components/header/NavBar';
-import DetailsItem from './components/components items/DetailsItem';
-import Carditem from './components/components items/Carditem';
-import ContainerCardItems from './components/components items/ContainerCardItems';
-import { BrowserRouter, Route , Routes} from "react-router-dom";
+import ContainerCardItems from './components/components item/ContainerCardItems';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DetailsItem from './components/components item/DetailsItem';
+import { createContext, useState } from 'react';
+import ProviderContextoListCart from './components/components item/providerContextoListCart';
 
-function App(){
-    return (
+
+function App() {
+
+  return (
+    <ProviderContextoListCart>
       <BrowserRouter>
-      <NavBar/>
-      <Routes>
-      <Route path='/' element={ <ContainerCardItems />} />
-      <Route path='/item/:id' element={ <ContainerCardItems />} />
-      <Route path='/category/:idCategory' element={ <ContainerCardItems />} />
-      </Routes>
-      
-      
+        <NavBar />
+          <Routes>
+            <Route path='/' element={ <ContainerCardItems />} />
+            <Route path='/item/:idItem' element={ <DetailsItem />} />
+            <Route path='/category/:idCategory' element={ <ContainerCardItems />} />
+          </Routes>
       </BrowserRouter>
-      
+    </ProviderContextoListCart>
     
-    );
+    
+  );
+}
 
-  }
-  export default App;
+export default App;

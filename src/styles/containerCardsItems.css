@@ -1,7 +1,13 @@
-.containerCardsItems{
+.containerCardItems{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 80px 10px;
+}
+
+.containerCardItems .containerSpinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
